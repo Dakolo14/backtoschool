@@ -40,9 +40,8 @@
       }
 
       .container {
-        max-width: 1320px;
         margin: 0 auto;
-        padding: 0 16px;
+        padding: 0 12px;
       }
 
       /* --- Transparent Navbar --- */
@@ -60,7 +59,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0;
+        padding: 0 12px;
         gap: 24px;
       }
 
@@ -148,7 +147,6 @@
 
       .best-sellers-section .container {
         width: 100%;
-        max-width: 1320px;
         margin: 0 auto;
         display: block;
       }
@@ -259,6 +257,21 @@
       }
 
       .bento-card-400:hover {
+        opacity: 0.92;
+        transform: translateY(-2px);
+      }
+
+      .bento-card-img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 12px;
+        display: block;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+        cursor: pointer;
+      }
+
+      .bento-card-img:hover {
         opacity: 0.92;
         transform: translateY(-2px);
       }
@@ -799,12 +812,12 @@
     </header>
 
     <main class="container">
-      <!-- Main Hero Banner Placeholder -->
+      <!-- Main Hero Banner -->
       <div class="banner-placeholder-container">
-        <div class="banner-placeholder">
-          <span class="banner-dimension-tag">Banner Placeholder: 1400px × 400px (Mobile: 600px × 600px)</span>
-          <h1 class="banner-title">Konga Back to School Banner</h1>
-        </div>
+        <picture>
+          <source media="(max-width: 768px)" srcset="./Mobile%20KV.png" />
+          <img src="./Desktop%20KV.png" alt="Konga Back to School Banner" style="width: 100%; height: auto; border-radius: 12px; display: block;" />
+        </picture>
       </div>
 
       <!-- Bento Grid Section 1: OUR CATEGORIES (Inspiration 1) -->
@@ -818,73 +831,49 @@
             <div class="category-bento-grid">
               <!-- Bento Item 1 -->
               <div class="bento-item-wrapper">
-                <div class="bento-card-400">
-                  <div class="bento-card-heading">LAPTOPS & COMPUTING</div>
-                  <div class="bento-card-sub">400 BY 400</div>
-                </div>
+                <img src="./Laptops%20and%20computing.png" alt="LAPTOPS & COMPUTING" class="bento-card-img" />
                 <div class="bento-card-title-under">LAPTOPS & COMPUTING</div>
               </div>
 
               <!-- Bento Item 2 -->
               <div class="bento-item-wrapper">
-                <div class="bento-card-400">
-                  <div class="bento-card-heading">MOBILE PHONES & TABLETS</div>
-                  <div class="bento-card-sub">400 BY 400</div>
-                </div>
+                <img src="./Mobile%20phones%20and%20tablets.png" alt="MOBILE PHONES & TABLETS" class="bento-card-img" />
                 <div class="bento-card-title-under">MOBILE PHONES & TABLETS</div>
               </div>
 
               <!-- Bento Item 3 -->
               <div class="bento-item-wrapper">
-                <div class="bento-card-400">
-                  <div class="bento-card-heading">BOOKS & STATIONERY</div>
-                  <div class="bento-card-sub">400 BY 400</div>
-                </div>
+                <img src="./Books%20and%20stationery.png" alt="BOOKS & STATIONERY" class="bento-card-img" />
                 <div class="bento-card-title-under">BOOKS & STATIONERY</div>
               </div>
 
               <!-- Bento Item 4 -->
               <div class="bento-item-wrapper">
-                <div class="bento-card-400">
-                  <div class="bento-card-heading">BACKPACKS & LUGGAGE</div>
-                  <div class="bento-card-sub">400 BY 400</div>
-                </div>
+                <img src="./Bags%20and%20luggages.png" alt="BACKPACKS & LUGGAGE" class="bento-card-img" />
                 <div class="bento-card-title-under">BACKPACKS & LUGGAGE</div>
               </div>
 
               <!-- Bento Item 5 -->
               <div class="bento-item-wrapper">
-                <div class="bento-card-400">
-                  <div class="bento-card-heading">GROCERIES & PROVISIONS</div>
-                  <div class="bento-card-sub">400 BY 400</div>
-                </div>
+                <img src="./food.png" alt="GROCERIES & PROVISIONS" class="bento-card-img" />
                 <div class="bento-card-title-under">GROCERIES & PROVISIONS</div>
               </div>
 
               <!-- Bento Item 6 -->
               <div class="bento-item-wrapper">
-                <div class="bento-card-400">
-                  <div class="bento-card-heading">SCHOOL FASHION</div>
-                  <div class="bento-card-sub">400 BY 400</div>
-                </div>
+                <img src="./Fashion.png" alt="SCHOOL FASHION" class="bento-card-img" />
                 <div class="bento-card-title-under">SCHOOL FASHION</div>
               </div>
 
               <!-- Bento Item 7 -->
               <div class="bento-item-wrapper">
-                <div class="bento-card-400">
-                  <div class="bento-card-heading">ELECTRONICS & GADGETS</div>
-                  <div class="bento-card-sub">400 BY 400</div>
-                </div>
+                <img src="./STUDENT%20TECH.png" alt="ELECTRONICS & GADGETS" class="bento-card-img" />
                 <div class="bento-card-title-under">ELECTRONICS & GADGETS</div>
               </div>
 
               <!-- Bento Item 8 -->
               <div class="bento-item-wrapper">
-                <div class="bento-card-400">
-                  <div class="bento-card-heading">STUDENT ACCESSORIES</div>
-                  <div class="bento-card-sub">400 BY 400</div>
-                </div>
+                <img src="./Student%20accessories.png" alt="STUDENT ACCESSORIES" class="bento-card-img" />
                 <div class="bento-card-title-under">ACCESSORIES</div>
               </div>
             </div>
@@ -998,26 +987,18 @@
         <div class="container">
           <div class="asymmetric-bento-container">
             <!-- Left Column: Large Square Card 1080 x 1080 -->
-            <div class="bento-large-card">
-              <div class="bento-large-title">CAMPUS LIFE & ESSENTIALS</div>
-              <div style="font-size:0.85rem; opacity:0.85; margin-top:6px;">1080 BY 1080</div>
-            </div>
+            <a href="https://www.konga.com/search?search=CampusLife" class="bento-large-card" style="background-image: url('./Campus%20life%20and%20essentials.png'); background-size: cover; background-position: center; border: none; text-decoration: none;">
+            </a>
 
             <!-- Right Column: Wide Card + Bottom Row (2 Squares) -->
             <div class="bento-right-col">
-              <div class="bento-wide-card">
-                <div class="bento-wide-title">STUDENT & HUSTLE TECH</div>
-                <div style="font-size:0.8rem; opacity:0.85; margin-top:4px;">650 BY 300</div>
-              </div>
+              <a href="https://www.konga.com/search?search=StudentTech" class="bento-wide-card" style="background-image: url('./STUDENT%20TECH.png'); background-size: cover; background-position: center; border: none; text-decoration: none;">
+              </a>
               <div class="bento-bottom-row">
-                <div class="bento-square-card">
-                  <div class="bento-square-title">POWERED UP</div>
-                  <div style="font-size:0.75rem; opacity:0.85; margin-top:4px;">1080 BY 1080</div>
-                </div>
-                <div class="bento-square-card">
-                  <div class="bento-square-title">NETWORKING & ACCESSORIES</div>
-                  <div style="font-size:0.75rem; opacity:0.85; margin-top:4px;">1080 BY 1080</div>
-                </div>
+                <a href="https://www.konga.com/search?search=PoweredUp" class="bento-square-card" style="background-image: url('./Power%20up.png'); background-size: cover; background-position: center; border: none; text-decoration: none;">
+                </a>
+                <a href="https://www.konga.com/search?search=NetworkingAccessories" class="bento-square-card" style="background-image: url('./Networking%20and%20accessories.png'); background-size: cover; background-position: center; border: none; text-decoration: none;">
+                </a>
               </div>
             </div>
           </div>
@@ -1029,16 +1010,14 @@
         <div class="container">
           <div class="dual-banners-grid">
             <div class="promo-banner-card">
-              <div class="promo-banner-placeholder">
-                <span class="banner-size-tag">1400 BY 700 (2:1 ASPECT RATIO)</span>
-                <h3 class="promo-banner-title">GROCERIES & LUNCHBOX DEALS</h3>
-              </div>
+              <a href="https://www.konga.com/search?search=BackToSchoolGroceries">
+                <img src="./Groceries%20and%20lunchbox%20deals.png" alt="Groceries & Lunchbox Deals" style="width: 100%; aspect-ratio: 2 / 1; object-fit: cover; border-radius: 12px; display: block; transition: transform 0.2s ease, box-shadow 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='none'; this.style.boxShadow='none'" />
+              </a>
             </div>
             <div class="promo-banner-card">
-              <div class="promo-banner-placeholder" style="border-color:#ed017f;">
-                <span class="banner-size-tag">1400 BY 700 (2:1 ASPECT RATIO)</span>
-                <h3 class="promo-banner-title">RECREATION & CAMPUS DEALS</h3>
-              </div>
+              <a href="https://www.konga.com/search?search=CampusRecreation">
+                <img src="./Recreation%20and%20campus%20deal.png" alt="Recreation & Campus Deals" style="width: 100%; aspect-ratio: 2 / 1; object-fit: cover; border-radius: 12px; display: block; transition: transform 0.2s ease, box-shadow 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='none'; this.style.boxShadow='none'" />
+              </a>
             </div>
           </div>
         </div>
