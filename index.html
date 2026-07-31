@@ -60,7 +60,7 @@
         align-items: center;
         justify-content: space-between;
         padding: 0 12px;
-        gap: 24px;
+        gap: 16px;
       }
 
       .logo-wireframe {
@@ -99,7 +99,7 @@
       .banner-placeholder-container {
         width: 100%;
         margin-top: 16px;
-        margin-bottom: 56px;
+        margin-bottom: 32px;
       }
 
       .banner-placeholder {
@@ -142,7 +142,7 @@
       .best-sellers-section {
         width: 100%;
         padding: 12px 0 !important;
-        margin-bottom: 56px;
+        margin-bottom: 32px;
       }
 
       .best-sellers-section .container {
@@ -223,14 +223,14 @@
       /* --- Bento Standalone Section --- */
       .bento-standalone-section {
         width: 100%;
-        margin-bottom: 56px;
+        margin-bottom: 32px;
       }
 
       /* --- Bento Grid 1: Shop By Category (4x2 Grid Inspiration 1) --- */
       .category-bento-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 24px;
+        gap: 16px;
         width: 100%;
       }
 
@@ -304,7 +304,7 @@
       .asymmetric-bento-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 24px;
+        gap: 16px;
         width: 100%;
       }
 
@@ -337,7 +337,7 @@
       .bento-right-col {
         display: flex;
         flex-direction: column;
-        gap: 24px;
+        gap: 16px;
       }
 
       .bento-wide-card {
@@ -369,7 +369,7 @@
       .bento-bottom-row {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 24px;
+        gap: 16px;
         height: calc(50% - 12px);
       }
 
@@ -401,13 +401,13 @@
       /* --- Promotional Dual Banners (2:1 Aspect Ratio / 1400 by 700 Banners) --- */
       .promo-dual-banners-section {
         width: 100%;
-        margin-bottom: 56px;
+        margin-bottom: 32px;
       }
 
       .dual-banners-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
+        gap: 16px;
         width: 100%;
       }
 
@@ -609,7 +609,7 @@
       .bundle-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 24px;
+        gap: 16px;
       }
 
       .bundle-card {
@@ -668,7 +668,7 @@
       /* --- Rate Us Banner Component --- */
       .rate-app-section {
         width: 100%;
-        margin-bottom: 56px;
+        margin-bottom: 32px;
       }
 
       .rate-app-placeholder {
@@ -704,7 +704,7 @@
       /* --- SEO Content Section --- */
       .seo-content-section {
         width: 100%;
-        margin-bottom: 56px;
+        margin-bottom: 32px;
       }
 
       .seo-card {
@@ -780,6 +780,23 @@
           gap: 12px;
         }
 
+        .desktop-kv { display: none !important; }
+        .mobile-kv { display: block !important; }
+
+        .bento-standalone-section,
+        .promo-dual-banners-section,
+        .best-sellers-section {
+          margin-bottom: 24px !important;
+        }
+
+        .bento-bottom-row {
+          grid-template-columns: 1fr !important;
+        }
+
+        .category-bento-grid {
+          gap: 12px !important;
+        }
+
         .asymmetric-bento-container,
         .dual-banners-grid {
           grid-template-columns: 1fr;
@@ -814,10 +831,8 @@
     <main class="container">
       <!-- Main Hero Banner -->
       <div class="banner-placeholder-container">
-        <picture>
-          <source media="(max-width: 768px)" srcset="https://www-konga-com-res.cloudinary.com/image/upload/v1785497704/landingPages/2026%20Marketing/BackToSchool08/Mobile_KV.png" />
-          <img src="https://www-konga-com-res.cloudinary.com/image/upload/v1785497700/landingPages/2026%20Marketing/BackToSchool08/Desktop_KV.png" alt="Konga Back to School Banner" style="width: 100%; height: auto; border-radius: 12px; display: block;" />
-        </picture>
+        <img src="https://www-konga-com-res.cloudinary.com/image/upload/v1785497700/landingPages/2026%20Marketing/BackToSchool08/Desktop_KV.png" alt="Konga Back to School Banner (Desktop)" class="desktop-kv" style="width: 100%; height: auto; border-radius: 12px; display: block;" />
+        <img src="https://www-konga-com-res.cloudinary.com/image/upload/v1785497704/landingPages/2026%20Marketing/BackToSchool08/Mobile_KV.png" alt="Konga Back to School Banner (Mobile)" class="mobile-kv" style="width: 100%; height: auto; border-radius: 12px; display: none;" />
       </div>
 
       <!-- Bento Grid Section 1: OUR CATEGORIES (Inspiration 1) -->
@@ -880,7 +895,7 @@
               <!-- Bento Item 7 -->
               <div class="bento-item-wrapper">
                 <a href="https://www.konga.com/search?q=BackToSchoolElectronics%26Gadgets&m_r=true" style="text-decoration: none; color: inherit; display: block;">
-                  <img src="https://www-konga-com-res.cloudinary.com/image/upload/v1785497711/landingPages/2026%20Marketing/BackToSchool08/STUDENT_TECH.png" alt="ELECTRONICS & GADGETS" class="bento-card-img" />
+                  <img src="https://www-konga-com-res.cloudinary.com/image/upload/v1785498449/landingPages/2026%20Marketing/BackToSchool08/Electronics.png" alt="ELECTRONICS & GADGETS" class="bento-card-img" />
                   <div class="bento-card-title-under">ELECTRONICS & GADGETS</div>
                 </a>
               </div>
@@ -916,6 +931,46 @@
         </div>
       </section>
 
+       <!-- Promotional Dual Banners Section (2:1 Aspect Ratio / 1400 by 700 Banners) -->
+      <section class="promo-dual-banners-section" id="dual-banners">
+        <div class="container">
+          <div class="dual-banners-grid">
+            <div class="promo-banner-card">
+              <a href="https://www.konga.com/search?q=BackToSchoolLunchbox%26Groceries&m_r=true">
+                <img src="https://www-konga-com-res.cloudinary.com/image/upload/v1785497703/landingPages/2026%20Marketing/BackToSchool08/Groceries_and_lunchbox_deals.png" alt="Groceries & Lunchbox Deals" style="width: 100%; aspect-ratio: 2 / 1; object-fit: cover; border-radius: 12px; display: block; transition: transform 0.2s ease, box-shadow 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='none'; this.style.boxShadow='none'" />
+              </a>
+            </div>
+            <div class="promo-banner-card">
+              <a href="https://www.konga.com/search?q=BackToSchoolRecreation%26CampusDeals&m_r=true">
+                <img src="https://www-konga-com-res.cloudinary.com/image/upload/v1785497709/landingPages/2026%20Marketing/BackToSchool08/Recreation_and_campus_deal.png" alt="Recreation & Campus Deals" style="width: 100%; aspect-ratio: 2 / 1; object-fit: cover; border-radius: 12px; display: block; transition: transform 0.2s ease, box-shadow 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='none'; this.style.boxShadow='none'" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+     
+      <!-- Laptops & Tech Section (5 Products per row) -->
+      <section class="best-sellers-section section-reset" id="laptops-tech">
+        <div class="container">
+          <div class="best-sellers-header">
+            <div class="best-sellers-title">LAPTOPS & TECH</div>
+            <a href="https://www.konga.com/search?q=BackToSchoolLaptop%26Computing&m_r=true" class="flash-more">
+              See more
+              <span class="icon-circle">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </a>
+          </div>
+
+          <!-- Products will be injected here from production -->
+        </div>
+      </section>
+
+
       <!-- Bento Grid Section 2: FEATURED CAMPAIGNS (Inspiration 2 & 3 Asymmetric Layout) -->
       <section class="bento-standalone-section" id="featured-campaigns">
         <div class="container">
@@ -939,43 +994,8 @@
         </div>
       </section>
 
-      <!-- Promotional Dual Banners Section (2:1 Aspect Ratio / 1400 by 700 Banners) -->
-      <section class="promo-dual-banners-section" id="dual-banners">
-        <div class="container">
-          <div class="dual-banners-grid">
-            <div class="promo-banner-card">
-              <a href="https://www.konga.com/search?q=BackToSchoolLunchbox%26Groceries&m_r=true">
-                <img src="https://www-konga-com-res.cloudinary.com/image/upload/v1785497703/landingPages/2026%20Marketing/BackToSchool08/Groceries_and_lunchbox_deals.png" alt="Groceries & Lunchbox Deals" style="width: 100%; aspect-ratio: 2 / 1; object-fit: cover; border-radius: 12px; display: block; transition: transform 0.2s ease, box-shadow 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='none'; this.style.boxShadow='none'" />
-              </a>
-            </div>
-            <div class="promo-banner-card">
-              <a href="https://www.konga.com/search?q=BackToSchoolRecreation%26CampusDeals&m_r=true">
-                <img src="https://www-konga-com-res.cloudinary.com/image/upload/v1785497709/landingPages/2026%20Marketing/BackToSchool08/Recreation_and_campus_deal.png" alt="Recreation & Campus Deals" style="width: 100%; aspect-ratio: 2 / 1; object-fit: cover; border-radius: 12px; display: block; transition: transform 0.2s ease, box-shadow 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='none'; this.style.boxShadow='none'" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <!-- Laptops & Tech Section (5 Products per row) -->
-      <section class="best-sellers-section section-reset" id="laptops-tech">
-        <div class="container">
-          <div class="best-sellers-header">
-            <div class="best-sellers-title">LAPTOPS & TECH</div>
-            <a href="https://www.konga.com/search?q=BackToSchoolLaptop%26Computing&m_r=true" class="flash-more">
-              See more
-              <span class="icon-circle">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 18L15 12L9 6" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </span>
-            </a>
-          </div>
-
-          <!-- Products will be injected here from production -->
-        </div>
-      </section>
-
+      
       <!-- Books & Writing Section (5 Products per row) -->
       <section class="best-sellers-section section-reset" id="books-writing">
         <div class="container">
