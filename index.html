@@ -99,7 +99,7 @@
       .banner-placeholder-container {
         width: 100%;
         margin-top: 16px;
-        margin-bottom: 32px;
+        margin-bottom: 12px;
       }
 
       .banner-placeholder {
@@ -767,8 +767,17 @@
       }
 
       @media (max-width: 768px) {
+        .navbar-container {
+          flex-direction: column;
+          gap: 12px;
+        }
         .nav-items {
-          display: none;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 12px;
+          padding: 0;
+          font-size: 0.85rem;
         }
 
         .banner-title {
@@ -780,8 +789,9 @@
           gap: 12px;
         }
 
-        .desktop-kv { display: none !important; }
-        .mobile-kv { display: block !important; }
+        /* Desktop KV is used on mobile too per request */
+        .desktop-kv { display: block !important; }
+        .mobile-kv { display: none !important; }
 
         .bento-standalone-section,
         .promo-dual-banners-section,
@@ -789,8 +799,19 @@
           margin-bottom: 24px !important;
         }
 
+        .bento-wide-card {
+          height: auto !important;
+          aspect-ratio: 2 / 1;
+        }
+
         .bento-bottom-row {
-          grid-template-columns: 1fr !important;
+          grid-template-columns: 1fr 1fr !important; /* Reverting to 2 columns so they are squares side-by-side */
+          height: auto !important;
+        }
+
+        .bento-square-card {
+          height: auto !important;
+          aspect-ratio: 1 / 1;
         }
 
         .category-bento-grid {
@@ -832,7 +853,7 @@
       <!-- Main Hero Banner -->
       <div class="banner-placeholder-container">
         <img src="https://www-konga-com-res.cloudinary.com/image/upload/v1785497700/landingPages/2026%20Marketing/BackToSchool08/Desktop_KV.png" alt="Konga Back to School Banner (Desktop)" class="desktop-kv" style="width: 100%; height: auto; border-radius: 12px; display: block;" />
-        <img src="https://www-konga-com-res.cloudinary.com/image/upload/v1785497704/landingPages/2026%20Marketing/BackToSchool08/Mobile_KV.png" alt="Konga Back to School Banner (Mobile)" class="mobile-kv" style="width: 100%; height: auto; border-radius: 12px; display: none;" />
+        
       </div>
 
       <!-- Bento Grid Section 1: OUR CATEGORIES (Inspiration 1) -->
